@@ -1,5 +1,5 @@
 source("Util.R")
- 
+
 twitterInit()
 
 df = searchTweet("マウンテンビュー")
@@ -9,11 +9,32 @@ summary(df)
 head(df)
 unique(df$text)
 
-df[,1]
+str(df)
+is.vector(df[,1])
 
-p = paste(df$text) #全部のtweetを連結
-mecabed = RMeCabC(p, 1) #形態素解析
-table(mecabed)
+p = paste(df$text, collapse = " ") #全部のtweetを連結
+mecabed = RMeCabC(p) #形態素解析
+p
+mecabed
+str(mecabed)
+table()
+
+mecabed <- rep(1,length=1)
+  
+tb <- c(mecabed,rep(1,length=1))
+tb
+a<- data.frame(Word=mecabed, Count=numeric(1))
+str(a)
+head(a)
+
+table(iris$Species)
+x=1:5
+x
+
+b= data.frame(a)
+str(b)
+
+summary(a)
 class(mecabed)
 
 mecabed[,names=="名詞"]
