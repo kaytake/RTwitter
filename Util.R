@@ -1,13 +1,21 @@
 #ライブラリの読み込み
 library("twitteR")
+library("RMeCab")
+library("tagcloud")
 
+#Twitter サーチ、特定のキーワードを含むTwitter をdfにして返す
 searchTweet <- function(searchWords, n=1000) {
   df <- twListToDF(searchTwitter(searchWords,n=n))  
   return(df)
 }
 
+#twitter サーチ結果のテキスト部分の単語出現頻度をDFで返す
+
+#twitter タグクラウド作成
+
+
+#Twitter のAuthentication 
 twitterInit <- function() {
-  
   #情報の入力
   consumerKey <- "JOpSD5R1YnmE8hIYahIikdKXV"
   consumerSecret <- "ZIuPA2KwHt8gorjUZvN33toAYNV6RU2eAJiVz1uQsRRtYir8x8"
