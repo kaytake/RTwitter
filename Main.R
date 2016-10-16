@@ -1,5 +1,5 @@
 source("Util.R")
-
+ 
 twitterInit()
 
 df = searchTweet("マウンテンビュー")
